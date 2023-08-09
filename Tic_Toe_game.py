@@ -9,13 +9,15 @@ def handle_move(board, player):
         row = int(input("Enter the row (0-2): "))
         col = int(input("Enter the column (0-2): "))
         
-        #handle inputs
+        # check inputs handling
         if (row or col)>2 or (row or col)<0:
             print("Invalid number. please enter valid number.")
-            
+        
+        # make a move     
         elif board[row][col] == "":
             board[row][col] = player
             break
+           
         else:
             print("Invalid move. Try again.")
 
